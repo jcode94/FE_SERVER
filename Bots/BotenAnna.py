@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -14,4 +15,4 @@ async def on_message(message):
     if message.content.startswith('$you dirty little slut'):
         await message.channel.send('be nice')
 
-client.run('ODIxNTY0MTE0NTYzMzY2OTMy.YFFjNA.yezFo0nfDQJJYj3zWqU5HX_SJD0')
+client.run(os.getenv('TOKEN'))
